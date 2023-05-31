@@ -8,7 +8,7 @@ df = pd.DataFrame(
        {"명령어": "st.time_input", "평점": 3, "is_widget": True},
    ]
 )
-edited_df = st.experimental_data_editor(df, num_rows="dynamic")
+edited_df = st.experimental_data_editor(df, num_rows="fixed")
 
 favorite_command = edited_df.loc[edited_df["평점"].idxmax()]["명령어"]
 st.markdown(f"너의 가장 선호하는 명령어는 **{favorite_command}** 🎈")
