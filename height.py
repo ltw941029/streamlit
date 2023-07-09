@@ -8,7 +8,7 @@ df = pd.DataFrame(
        {"명령어": "st.time_input", "평점": 3, "is_widget": True},
    ]
 )
-edited_df = st.experimental_data_editor(df, height = 300, num_rows="fixed")
+edited_df = st.experimental_data_editor(df, height = 100, num_rows="fixed")
 
 favorite_command = edited_df.loc[edited_df["평점"].idxmax()]["명령어"]
 
